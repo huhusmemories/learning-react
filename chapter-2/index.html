@@ -24,17 +24,19 @@
     const Banner = () => {
       const title = "Welcome to summoner's rift"
       const subtitle = "Thirty seconds until minions spawn"
-      const address = "https://github.com/huhusmemories"
-        // Comment outside jsx
+      // let value = 0
+      // const handleClick = (e) => {
+      //   value += 1
+      //   console.log(value)
+      //   console.log(e)
+      // }
+
       return (
         <div className="banner">
           <h2>{title.toLocaleUpperCase()}</h2>
           <p>{subtitle}</p>
-          {/*Comment inside JSX*/}
-          <p>Today's date is: {new Date().toDateString()}</p>
-          <p>Random number: {Math.floor(Math.random() * 100)}</p>
-          <p>Random number: {Math.ceil(Math.random() * 100)}</p>
-          <a href={address}>Here</a>
+          <button onClick={(e) => console.log(e)}>Click me</button>
+          {/*<button onClick={handleClick}>Click me</button>*/}
         </div>
       )
     }
