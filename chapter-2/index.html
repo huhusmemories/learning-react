@@ -22,9 +22,19 @@
   <script type="text/babel">
     // Add a react component
     const Banner = () => {
+      const title = "Welcome to summoner's rift"
+      const subtitle = "Thirty seconds until minions spawn"
+      const address = "https://github.com/huhusmemories"
+        // Comment outside jsx
       return (
-        <div>
-          <p>Banner</p>
+        <div className="banner">
+          <h2>{title.toLocaleUpperCase()}</h2>
+          <p>{subtitle}</p>
+          {/*Comment inside JSX*/}
+          <p>Today's date is: {new Date().toDateString()}</p>
+          <p>Random number: {Math.floor(Math.random() * 100)}</p>
+          <p>Random number: {Math.ceil(Math.random() * 100)}</p>
+          <a href={address}>Here</a>
         </div>
       )
     }
