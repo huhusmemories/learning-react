@@ -20,7 +20,16 @@
   </footer>
 
   <script type="text/babel">
-
+    // Add a react component
+    const Banner = () => {
+      return (
+        <div>
+          <p>Banner</p>
+        </div>
+      )
+    }
+    // Render the component to the DOM
+    ReactDOM.render(<Banner />,document.getElementById('banner'))
   </script>
 </body>
 </html>
