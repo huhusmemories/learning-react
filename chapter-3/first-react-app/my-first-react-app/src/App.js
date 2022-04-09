@@ -10,6 +10,7 @@ function App() {
   ])
 
   console.log(showEvents)
+  // Why when we console.log(showEvents) it console.logs twice?
 
   const handleClick = (id) => {
     setEvents((prevEvents) => {
@@ -19,7 +20,6 @@ function App() {
     })
     console.log(id)
   }
-
   return (
     <div className="App">
       {showEvents && (
