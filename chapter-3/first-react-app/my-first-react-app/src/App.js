@@ -4,6 +4,7 @@ import Title from './components/Title'
 import Modal from './components/Modal'
 
 function App() {
+  const [showModal, setShowModal] = useState(false)
   const [showEvents, setShowEvents] = useState(true)
   const [events, setEvents] = useState([
     {title: "mario's birthday bash", id:1},
@@ -11,7 +12,7 @@ function App() {
     {title: "race on moo moo farm", id:3}
   ])
 
-  console.log(showEvents)
+  console.log(showModal)
   // Why when we console.log(showEvents) it console.logs twice?
   // Solution: Due to react lifecycle
 
@@ -22,6 +23,10 @@ function App() {
       })
     })
     // console.log(id)
+  }
+
+  const handleClose = () => {
+    setShowModal(false)
   }
 
   const subtitle = "More events"
@@ -48,10 +53,15 @@ function App() {
         </React.Fragment>
       ))}
 
-      <Modal>
+
+        <div>
+          <button onClick={() => setShowModal(true)}> Show Modal</button>
+        </div>
+
+      {showModal && <Modal handleClose={handleClose}>
         <h2>10% Off Coupon code!!</h2>
         <p>Use the code CODE10 at the checkout.</p>
-      </Modal>
+      </Modal>}
     </div>
   );
 }
