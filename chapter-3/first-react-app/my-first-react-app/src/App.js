@@ -21,9 +21,13 @@ function App() {
     })
     console.log(id)
   }
+
+  const subtitle = "More events"
+
   return (
     <div className="App">
-      <Title />
+      <Title title="Events in your area" subtitle={subtitle}/>
+      <Title title="No more events in your area" subtitle="Oh noo"/>
 
       {showEvents && (
         <div>
