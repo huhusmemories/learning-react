@@ -10,12 +10,23 @@ export default function NewEventForm() {
     setDate('')
   }
 
+  const handleSubmit = (e) => {
+    e.preventDefault()
+
+    const event = {
+      title: title,
+      date: date,
+      id: Math.floor(Math.random() * 10000)
+    }
+    console.log(event)
+    resetForm()
+  }
   // const handleChange = (e) => {
   //   setTitle(e.target.value)
   // }
 
   return (
-    <form className="new-event-form">
+    <form className="new-event-form" onSubmit={handleSubmit}>
       <label>
         <span>Event Title:</span>
         <input
@@ -35,8 +46,8 @@ export default function NewEventForm() {
       </label>
 
       <button>Submit</button>
-      <p> title - {title}, date - {date}</p>
-      <p onClick={resetForm}>Reset the form </p>
+      {/* <p> title - {title}, date - {date}</p>
+      <p onClick={resetForm}>Reset the form </p> */}
     </form>
   )
 }
