@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom'
 // Style
 import './Navbar.css'
 
+// components
+import Searchbar from '../components/Searchbar'
 export default function Navbar() {
   return (
     <div className="navbar">
@@ -10,7 +12,7 @@ export default function Navbar() {
         <Link to="/" className='brand'>
           <h1>Cooking Ninja</h1>
         </Link>
-
+        <Searchbar/>
         <Link to="/create">
           Create Recipe
         </Link>
