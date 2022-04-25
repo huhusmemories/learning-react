@@ -38,31 +38,15 @@
       "cookingTime": "35 minutes"
     },
     {
-      "title": "aseookase",
+      "title": "Chicken Curry",
       "ingredients": [
-        "asease",
-        "aseae"
-      ],
-      "method": "asease",
-      "cookingTime": "2 minutes",
-      "id": "zsbnRuz"
-    },
-    {
-      "title": "Testing",
-      "ingredients": [],
-      "method": "3",
-      "cookingTime": "4 minutes",
-      "id": "jnt0yEF"
-    },
-    {
-      "title": "Curry",
-      "ingredients": [
-        "la",
-        "a",
-        "aa"
+        "chicken",
+        "potato",
+        "carrots",
+        "curry paste"
       ],
       "method": "ads",
-      "cookingTime": "228 minutes",
+      "cookingTime": "30 minutes",
       "id": "laJxoqu"
     }
   ]
