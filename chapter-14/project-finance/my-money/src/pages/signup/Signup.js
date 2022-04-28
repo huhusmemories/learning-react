@@ -5,9 +5,10 @@ export default function Signup() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [displayName, setDisplayName] = useState('')
+
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log(email, password, displayName)
+    console.log(displayName, email, password)
   }
 
   return (
@@ -19,6 +20,7 @@ export default function Signup() {
         <input
           type="text"
           onChange={(e) => setDisplayName(e.target.value)}
+          value={displayName}
         />
       </label>
 
@@ -27,6 +29,7 @@ export default function Signup() {
         <input
           type="email"
           onChange={(e) => setEmail(e.target.value)}
+          value={email}
         />
       </label>
 
@@ -35,6 +38,7 @@ export default function Signup() {
           <input
             type="password"
             onChange={(e) => setPassword(e.target.value)}
+            value={password}
           />
       </label>
       <button className='btn'>Sign Up</button>
